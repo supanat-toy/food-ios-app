@@ -134,17 +134,29 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foods.count
+        return foods.count + (foods.count / 5)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FoodTableViewCell.identifier) as? FoodTableViewCell else {
-            return UITableViewCell()
+        
+        if (indexPath.row != 0 && (indexPath.row + 1) % 5 == 0) {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageInsertionTableViewCell") else {
+                return UITableViewCell()
+            }
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FoodTableViewCell.identifier) as? FoodTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            let index = indexPath.row - (indexPath.row / 5)
+            print(index)
+            let food = foods[index]
+            cell.setCell(viewModel: food)
+            
+            return cell
         }
         
-        let food = foods[indexPath.row]
-        cell.setCell(viewModel: food)
         
-        return cell
     }
 }

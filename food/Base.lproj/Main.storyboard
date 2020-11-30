@@ -87,6 +87,28 @@
                                             <outlet property="nameLabel" destination="m7c-7p-sAP" id="kh6-IR-boN"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageInsertionTableViewCell" rowHeight="54" id="rw0-Jc-RkN">
+                                        <rect key="frame" x="0.0" y="150" width="414" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rw0-Jc-RkN" id="6Sf-MI-UKY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Insertion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXF-BG-TUT">
+                                                    <rect key="frame" x="146.5" y="15" width="121.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XXF-BG-TUT" firstAttribute="centerX" secondItem="6Sf-MI-UKY" secondAttribute="centerX" id="O0J-iE-fXm"/>
+                                                <constraint firstAttribute="bottom" secondItem="XXF-BG-TUT" secondAttribute="bottom" constant="15" id="cFC-bV-pyY"/>
+                                                <constraint firstItem="XXF-BG-TUT" firstAttribute="top" secondItem="6Sf-MI-UKY" secondAttribute="top" constant="15" id="z9j-Tt-tTm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.1206196472" green="0.44076478479999998" blue="0.65876311060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="c8r-HB-UEd"/>
